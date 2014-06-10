@@ -6,7 +6,7 @@ ENV container docker
 
 # Install pre-requisites
 RUN yum update -y; yum clean all
-RUN yum install -y openssh-server squid httpd-tools supervisor; yum clean all
+RUN yum install -y procps-ng util-linux openssh-server squid httpd-tools supervisor; yum clean all
 
 # Install rutorrent
 RUN mkdir -p /var/run/sshd /var/run/supervisord
